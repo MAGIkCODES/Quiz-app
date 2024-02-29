@@ -116,4 +116,21 @@ const emitSelectedOption = (isCorrect) => {
 .option-value p {
   margin-left: 20px;
 }
+
+@media (max-width: 768px) {
+  .question {
+    font-size: 30px; 
+    margin-bottom: 
+  }
+
+  .option-label {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .option-value {
+    font-size: 20px;
+  }
+}
 </style>

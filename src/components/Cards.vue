@@ -24,9 +24,10 @@
 <style scoped>
 .card {
   width: 300px;
+  height: 300px;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.30);
   margin-bottom: 35px;
   margin-right: 20px;
   cursor: pointer;
@@ -55,4 +56,17 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  /* Adjustments for mobile screens */
+  .card {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 20px;
+    margin-right: 0; 
+  }
+
+  .card img {
+    height: auto; 
+  }
+}
 </style>

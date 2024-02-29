@@ -14,7 +14,6 @@ watch(search, () => {
 </script>
 
 <template>
- <div>
   <header>
     <h1>Quizes</h1>
     <input v-model.trim="search" type="text" placeholder="search...">
@@ -24,18 +23,17 @@ watch(search, () => {
     <Cards v-for="quiz in quizes" :key="quiz.id" :quiz="quiz"/>
   </div>
   
- </div>
 </template>
 
 <style scoped>
 
-
 header {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   margin-top: 30px;
   display: flex;
-  align-items: center;
-  /* justify-content: space-evenly; */
+  /* align-items: center; */
 }
 
 header h1 {
@@ -45,16 +43,37 @@ header h1 {
 }
 
 header input {
+  height: 40px;
   border: 0;
   background-color: rgba(128,128,128,0.1);
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   outline: none;
+  margin-top: 18px;
 }
 
 .options-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for mobile screens */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
+
+  header input {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 </style>
